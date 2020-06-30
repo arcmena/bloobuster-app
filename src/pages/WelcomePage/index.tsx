@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import {
-    Whrapper,
+    Container,
     TextDiv,
     LearnMore,
     PlayIcon,
@@ -14,7 +14,7 @@ import Girl from "../../assets/girl-wider.png";
 
 export const WelcomePage = () => {
     return (
-        <Whrapper>
+        <Container>
             <TextDiv>
                 <h2>Bloobuster</h2>
                 <LearnMore>
@@ -37,6 +37,6 @@ export const WelcomePage = () => {
                 </Link>
             </TextDiv>
             <img src={Girl} alt="girl.png" />
-        </Whrapper>
+        </Container>
     );
 };

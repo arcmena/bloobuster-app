@@ -5,7 +5,7 @@ import {
     ArrowRightAlt,
 } from "styled-icons/material-outlined";
 
-export const Whrapper = styled.div`
+export const Container = styled.div`
     height: 100vh;
     display: flex;
 
@@ -50,6 +50,9 @@ export const TextDiv = styled.div`
 `;
 
 export const LearnMore = styled.div`
+    display: flex;
+    align-items: center;
+
     cursor: pointer;
 
     padding-top: 80px;
@@ -86,6 +89,12 @@ export const JoinUsButton = styled.div`
         font-family: "Rubik";
         font-size: 15pt;
         color: #fafafa;
+    }
+
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #c41f1f;
     }
 `;
 export const LeftArrow = styled(ArrowRightAlt)`
