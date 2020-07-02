@@ -65,4 +65,12 @@ export const SignInButton = styled.button`
         font-family: "Rubik";
         font-size: 14pt;
     }
+
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #c41f1f;
+    }
 `;

@@ -6,6 +6,8 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
 
+    background-color: #fafafa;
+
     img {
         position: absolute;
         left: 0;
@@ -31,6 +33,7 @@ export const RightPainel = styled.div`
         font-size: 24pt;
         font-weight: normal;
         margin-left: auto;
+        pointer-events: none;
     }
 `;
 
@@ -114,7 +117,7 @@ export const GoBack = styled.div`
 
 export const LeftArrow = styled(KeyboardReturn)`
     width: 35px;
-    height: 35px;
+    height: 30px;
     color: #ff2c2c;
 `;
 

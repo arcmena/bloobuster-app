@@ -9,6 +9,8 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
 
+    background-color: #fafafa;
+
     img {
         position: absolute;
         right: 0;
