@@ -78,6 +78,8 @@ export const FinishButton = styled.button`
 
     cursor: pointer;
 
+    transition: background-color 0.2s;
+
     &:hover {
         background-color: #c41f1f;
     }
