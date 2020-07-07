@@ -1,15 +1,15 @@
 import React from "react";
 
+import { UserProvider } from "./config/contexts/UserContext";
 import Routes from "./routes";
-
 import GlobalStyles from "./GlobalStyles";
 
 function App() {
     return (
-        <div className="App">
+        <UserProvider>
             <Routes />
             <GlobalStyles />
-        </div>
+        </UserProvider>
     );
 }
 

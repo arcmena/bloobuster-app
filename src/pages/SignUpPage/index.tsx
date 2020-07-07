@@ -32,7 +32,7 @@ export const SignUpPage = () => {
 
     const history = useHistory();
 
-    async function onSubmit(e: FormEvent) {
+    async function handleSubmit(e: FormEvent) {
         e.preventDefault();
 
         if (inputValues.password !== inputValues.confPassword) {
@@ -53,7 +53,7 @@ export const SignUpPage = () => {
         }, 5000);
     }
 
-    function onChange(e: ChangeEvent<HTMLInputElement>) {
+    function handleChange(e: ChangeEvent<HTMLInputElement>) {
         const { name, value } = e.target;
         setInputValues({ ...inputValues, [name]: value });
     }
@@ -69,7 +69,10 @@ export const SignUpPage = () => {
                 <h2>Bloobuster</h2>
                 <h3>Sign Up</h3>
                 <FormDiv>
-                    <SignUpForm onChange={onChange} onSubmit={onSubmit} />
+                    <SignUpForm
+                        onChange={handleChange}
+                        onSubmit={handleSubmit}
+                    />
                 </FormDiv>
             </RightPainel>
             <Link to="/login">

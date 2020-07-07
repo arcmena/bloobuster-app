@@ -1,5 +1,6 @@
-import React, { FormEvent } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, FormEvent, useContext, ChangeEvent } from "react";
+import { Link, useHistory } from "react-router-dom";
+import SyncLoader from "react-spinners/SyncLoader";
 
 import { LoginForm } from "../../components";
 
@@ -16,10 +17,33 @@ import {
 
 import Boy from "../../assets/boy-wider.png";
 
+import { UserContext } from "../../config/contexts/UserContext";
+
 export const LoginPage = () => {
-    function onSubmit(e: FormEvent) {
+    const [values, setValues] = useState({});
+    const [loading, setLoading] = useState(false);
+
+    const { login } = useContext(UserContext);
+
+    const history = useHistory();
+
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-    }
+
+        const logData = await login(values);
+
+        if (!logData) return;
+
+        setLoading(true);
+        setTimeout(() => {
+            history.push("/");
+        }, 3000);
+    };
+
+    const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setValues({ ...values, [name]: value });
+    };
 
     return (
         <Container>
@@ -27,9 +51,22 @@ export const LoginPage = () => {
                 <h2>Bloobuster</h2>
                 <FormWhrapper>
                     <FormDiv>
-                        <h1>Login</h1>
-                        <LoginForm onChange onSubmit={onSubmit} />
-                        <h3>Forgot Password?</h3>
+                        {!loading ? (
+                            <div>
+                                <h1>Login</h1>
+                                <LoginForm
+                                    onChange={handleChange}
+                                    onSubmit={handleSubmit}
+                                />
+                                <h3>Forgot Password?</h3>
+                            </div>
+                        ) : (
+                            <SyncLoader
+                                loading={loading}
+                                color={"#fafafa"}
+                                size={25}
+                            />
+                        )}
                     </FormDiv>
                 </FormWhrapper>
                 <Link to="/signup">
