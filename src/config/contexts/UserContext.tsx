@@ -6,13 +6,17 @@ interface ContextInterface {
     children: React.ReactNode;
 }
 
-interface initContextProps {
+interface InitContextProps {
     login: Function;
-    currentUser: JSON;
+    currentUser: {
+        email: string;
+        username: string;
+    };
     logged: Boolean;
+    setLogged: Function;
 }
 
-export const UserContext = createContext({} as initContextProps);
+export const UserContext = createContext({} as InitContextProps);
 
 export const UserProvider: FunctionComponent<ContextInterface> = ({
     children,
@@ -22,13 +26,18 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
 
     const login = (values: any) => {
         api.post("/login", values)
-            .then(({ data }) => setData(data))
+            .then(({ data }) => {
+                setUserData(data);
+                setTimeout(() => {
+                    setLogged(true);
+                }, 1000);
+                return "ok";
+            })
             .catch((error) => console.error(error.message));
     };
 
-    const setData = ({ token, user }) => {
+    const setUserData = ({ token, user }) => {
         localStorage.token = token;
-        setLogged(true);
         setCurrentUser(user);
     };
 
@@ -36,6 +45,7 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
         login,
         currentUser,
         logged,
+        setLogged,
     };
 
     return (

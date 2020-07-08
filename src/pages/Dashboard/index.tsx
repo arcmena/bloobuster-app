@@ -1,19 +1,16 @@
 import React, { useEffect, useContext } from "react";
 
 import { UserContext } from "../../config/contexts/UserContext";
+import { Feed } from "../../components";
 
-export const Feed = () => {
+export const Dashboard = () => {
     const { currentUser, logged } = useContext(UserContext);
-
-    useEffect(() => {
-        console.log(currentUser);
-        console.log(logged);
-    }, []);
 
     return (
         <div>
-            <h1>esse é feed</h1>
-            <h2>aaaaaaaaaaaa</h2>
+            <h1>dashboard</h1>
+            <h2>Olá {currentUser.username}</h2>
+            <Feed />
         </div>
     );
 };

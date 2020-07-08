@@ -75,7 +75,7 @@ export const SignUpPage = () => {
                     />
                 </FormDiv>
             </RightPainel>
-            <Link to="/login">
+            <Link to="/">
                 <GoBack>
                     <LeftArrow />
                     <span>go back</span>

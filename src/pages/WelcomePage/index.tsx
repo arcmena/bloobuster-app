@@ -29,7 +29,7 @@ export const WelcomePage = () => {
                     experiences. Here you can publish reviews, create posts and
                     discuss about what you loved... or hated about them.
                 </h4>
-                <Link to="/login">
+                <Link to="/">
                     <JoinUsButton>
                         <span>Join us!</span>
                         <LeftArrow />

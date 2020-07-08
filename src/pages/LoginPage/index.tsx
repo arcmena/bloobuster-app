@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, useContext, ChangeEvent } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
 
 import { LoginForm } from "../../components";
@@ -25,22 +25,19 @@ export const LoginPage = () => {
 
     const { login } = useContext(UserContext);
 
-    const history = useHistory();
-
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-
-        const logData = await login(values);
-
-        if (!logData) return;
-
         setLoading(true);
-        setTimeout(() => {
-            history.push("/");
-        }, 3000);
+
+        const response = await login(values);
+
+        if (response !== "ok") {
+            console.error("Credentials don't Match");
+            setLoading(false);
+        }
     };
 
-    const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setValues({ ...values, [name]: value });
     };
@@ -64,7 +61,7 @@ export const LoginPage = () => {
                             <SyncLoader
                                 loading={loading}
                                 color={"#fafafa"}
-                                size={25}
+                                size={20}
                             />
                         )}
                     </FormDiv>
@@ -79,7 +76,7 @@ export const LoginPage = () => {
                 </Link>
             </RightPainel>
             <img src={Boy} alt="boy.png" />
-            <Link to="/">
+            <Link to="/welcome">
                 <GoBack>
                     <LeftArrow />
                     <span>go back</span>
