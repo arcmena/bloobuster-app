@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //Pages
@@ -10,7 +10,11 @@ import { Dashboard } from "./pages/Dashboard";
 import { UserContext } from "./config/contexts/UserContext";
 
 const Routes = () => {
-    const { logged } = useContext(UserContext);
+    const { logged, refreshToken } = useContext(UserContext);
+
+    useEffect(() => {
+        refreshToken();
+    }, []);
 
     return (
         <BrowserRouter>

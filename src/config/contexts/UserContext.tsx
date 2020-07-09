@@ -14,6 +14,7 @@ interface InitContextProps {
     };
     logged: Boolean;
     setLogged: Function;
+    refreshToken: Function;
 }
 
 export const UserContext = createContext({} as InitContextProps);
@@ -36,6 +37,12 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
             .catch((error) => console.error(error.message));
     };
 
+    const refreshToken = () => {
+        api.get("/refreshToken")
+            .then(({ data }) => setUserData(data))
+            .catch((error) => console.error(error));
+    };
+
     const setUserData = ({ token, user }) => {
         localStorage.token = token;
         setCurrentUser(user);
@@ -46,6 +53,7 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
         currentUser,
         logged,
         setLogged,
+        refreshToken,
     };
 
     return (

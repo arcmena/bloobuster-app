@@ -1,6 +1,10 @@
 <div align="center">
 <img src="https://user-images.githubusercontent.com/57734796/85964187-0eeb8780-b98f-11ea-83a0-88548d405248.png" width="250" />
 <p>A new way to share and talk about media.</p>
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/arcmena/bloobuster-app?color=FF2C2C&style=flat-square">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/arcmena/bloobuster-app?color=FF2C2C&style=flat-square">
+<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/arcmena/bloobuster-app?color=FF2C2C&style=flat-square">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/arcmena/bloobuster-app?color=FF2C2C&style=flat-square">
 </div>
 
 ## What is it?
@@ -19,6 +23,15 @@ Bloobuster is an APP made to share tv shows and movies experiences. Here you can
   <img src="https://user-images.githubusercontent.com/57734796/85964072-ab615a00-b98e-11ea-95c1-5c58d13364ad.png" width="400" /> 
 </p>
 
+<p>
+  <img src="https://user-images.githubusercontent.com/57734796/86968320-608bd300-c142-11ea-8da2-a900c20994e0.png" width="400" />
+  <img src="https://user-images.githubusercontent.com/57734796/86968508-acd71300-c142-11ea-83b6-9d2ef1ea2d1c.png" width="400" /> 
+</p>
+
 <div align="center">
 🛠 IN PROGRESS
 </div>
+
+## Author
+
+-   **Marcelo Mena** [arcmena](https://github.com/arcmena)

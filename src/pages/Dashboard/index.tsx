@@ -9,7 +9,6 @@ export const Dashboard = () => {
     return (
         <div>
             <h1>dashboard</h1>
-            <h2>Olá {currentUser.username}</h2>
             <Feed />
         </div>
     );
