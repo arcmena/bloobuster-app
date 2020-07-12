@@ -1,6 +1,6 @@
-import React, { FunctionComponent, createContext, useState } from "react";
+import React, { FunctionComponent, createContext, useState } from 'react';
 
-import api from "../../services/api";
+import api from '../../services/api';
 
 interface ContextInterface {
     children: React.ReactNode;
@@ -14,6 +14,7 @@ interface InitContextProps {
     };
     logged: Boolean;
     setLogged: Function;
+    logout: Function;
     refreshToken: Function;
 }
 
@@ -25,27 +26,26 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
     const [currentUser, setCurrentUser] = useState(null);
     const [logged, setLogged] = useState(false);
 
-    const login = (values: any) => {
-        api.post("/login", values)
-            .then(({ data }) => {
-                setUserData(data);
-                setTimeout(() => {
-                    setLogged(true);
-                }, 1000);
-                return "ok";
-            })
+    const login = (values) => {
+        api.post('/login', values)
+            .then(({ data }) => setUserData(data))
             .catch((error) => console.error(error.message));
     };
 
     const refreshToken = () => {
-        api.get("/refreshToken")
+        api.get('/refreshToken')
             .then(({ data }) => setUserData(data))
             .catch((error) => console.error(error));
+    };
+
+    const logout = () => {
+        localStorage.removeItem('token');
     };
 
     const setUserData = ({ token, user }) => {
         localStorage.token = token;
         setCurrentUser(user);
+        setLogged(true);
     };
 
     const providerValue = {
@@ -53,6 +53,7 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
         currentUser,
         logged,
         setLogged,
+        logout,
         refreshToken,
     };
 

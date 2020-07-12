@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 
-export const MoviesLayout: FunctionComponent = () => {
+const MoviesLayout: FunctionComponent = () => {
     return (
         <div>
             Here shoud be movies:
@@ -11,3 +11,5 @@ export const MoviesLayout: FunctionComponent = () => {
         </div>
     );
 };
+
+export default MoviesLayout;

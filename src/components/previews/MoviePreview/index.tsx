@@ -1,12 +1,12 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from 'react';
 
 //Swiper
-import Swiper from "swiper";
-import "swiper/swiper-bundle.css";
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
 
-import api from "../../../services/api";
+import api from '../../../services/api';
 
-import { Container } from "./styles";
+import { Container } from './styles';
 
 interface MostPopular {
     id: string;
@@ -25,13 +25,13 @@ export const MoviePreview: FunctionComponent = () => {
     const [mostPopular, setMostPopular] = useState<ComingSoon[]>([]);
 
     useEffect(() => {
-        api.get("/index").then(({ data }) => {
+        api.get('/index').then(({ data }) => {
             setComingSoon(data.comingSoon);
             setMostPopular(data.mostPopular);
         });
     }, []);
 
-    new Swiper(".swiper-container", {
+    new Swiper('.swiper-container', {
         slidesPerView: 2,
         spaceBetween: 2,
         freeMode: true,

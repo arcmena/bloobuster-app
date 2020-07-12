@@ -1,8 +1,14 @@
-import React, { useState, FormEvent, useContext, ChangeEvent } from "react";
-import { Link } from "react-router-dom";
-import SyncLoader from "react-spinners/SyncLoader";
+import React, {
+    useState,
+    FormEvent,
+    useContext,
+    ChangeEvent,
+    useEffect,
+} from 'react';
+import { Link } from 'react-router-dom';
+import SyncLoader from 'react-spinners/SyncLoader';
 
-import { LoginForm } from "../../components";
+import { LoginForm } from '../../components';
 
 import {
     Container,
@@ -13,28 +19,28 @@ import {
     RightArrow,
     GoBack,
     LeftArrow,
-} from "./styles";
+} from './styles';
 
-import Boy from "../../assets/boy-wider.png";
+import Boy from '../../assets/boy-wider.png';
 
-import { UserContext } from "../../config/contexts/UserContext";
+import { UserContext } from '../../config/contexts/UserContext';
 
 export const LoginPage = () => {
     const [values, setValues] = useState({});
     const [loading, setLoading] = useState(false);
 
-    const { login } = useContext(UserContext);
+    const { login, logout } = useContext(UserContext);
+
+    useEffect(() => {
+        logout();
+        //eslint-disable-next-line
+    }, []);
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         setLoading(true);
 
-        const response = await login(values);
-
-        if (response !== "ok") {
-            console.error("Credentials don't Match");
-            setLoading(false);
-        }
+        await login(values);
     };
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +66,7 @@ export const LoginPage = () => {
                         ) : (
                             <SyncLoader
                                 loading={loading}
-                                color={"#fafafa"}
+                                color={'#fafafa'}
                                 size={20}
                             />
                         )}
