@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { AlternateEmail, Lock } from '../../../styles/Icons';
 
@@ -33,10 +33,14 @@ export const Username = styled.div`
     border-bottom: solid 1px #ff2c2c;
 `;
 
-export const EmailIcon = styled(AlternateEmail)`
+const iconCSS = css`
     width: 30px;
     height: 30px;
     color: rgba(255, 44, 44, 0.5);
+`;
+
+export const EmailIcon = styled(AlternateEmail)`
+    ${iconCSS}
 `;
 
 export const Password = styled.div`
@@ -49,9 +53,7 @@ export const Password = styled.div`
 `;
 
 export const LockIcon = styled(Lock)`
-    width: 30px;
-    height: 30px;
-    color: rgba(255, 44, 44, 0.5);
+    ${iconCSS}
 `;
 
 export const SignInButton = styled.button`

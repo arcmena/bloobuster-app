@@ -71,15 +71,15 @@ export const LoginPage = () => {
                             />
                         )}
                     </FormDiv>
+                    <Link to="/signup">
+                        <SignUp>
+                            <span>
+                                Don’t have an account? <span>Sing up!</span>
+                            </span>
+                            <RightArrow />
+                        </SignUp>
+                    </Link>
                 </FormWhrapper>
-                <Link to="/signup">
-                    <SignUp>
-                        <span>
-                            Don’t have an account? <span>Sing up!</span>
-                        </span>
-                        <RightArrow />
-                    </SignUp>
-                </Link>
             </RightPainel>
             <img src={Boy} alt="boy.png" />
             <Link to="/welcome">

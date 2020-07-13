@@ -7,6 +7,7 @@ export const Container = styled.div`
     font-size: 20px;
     h3 {
         font-weight: normal;
+        padding-bottom: 26px;
     }
 
     img {

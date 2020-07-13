@@ -12,13 +12,13 @@ export const Container = styled.div`
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 36%;
+        height: 75%;
     }
 `;
 export const RightPainel = styled.div`
     background-color: #102538;
     margin-left: auto;
-    width: 950px;
+    width: 1320px;
     height: 100vh;
 
     padding: 55px 73px 0px 73px;
@@ -47,18 +47,20 @@ export const FormDiv = styled.div`
 
     background-color: rgba(17, 45, 70, 0.85);
 
-    height: 435px;
-    width: 500px;
+    height: 535px;
+    width: 600px;
+
+    text-align: center;
 
     h1 {
         margin-bottom: 25px;
         font-family: 'Rubik';
-        font-size: 50pt;
+        font-size: 55pt;
         font-weight: normal;
     }
 
     h3 {
-        margin-top: 25px;
+        margin-top: 30px;
         font-family: 'Oxygen';
         font-size: 12pt;
         font-weight: normal;
@@ -69,6 +71,9 @@ export const FormWhrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-direction: column;
+    height: 80%;
 `;
 
 export const SignUp = styled.div`
@@ -78,8 +83,8 @@ export const SignUp = styled.div`
     align-items: center;
     width: 270px;
 
-    right: 0;
-    margin: 5px 230px 0 0;
+    /* right: 0; */
+    /* margin: 5px 230px 0 0; */
 
     span {
         font-family: 'Oxygen';
