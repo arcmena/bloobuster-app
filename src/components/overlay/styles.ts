@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Done } from "styled-icons/material-outlined";
+import styled from 'styled-components';
+import { Done } from '../../styles/Icons';
 
 export const Container = styled.div`
     position: fixed;
@@ -36,7 +36,7 @@ export const MessageDiv = styled.div`
     h1,
     h2 {
         color: #fafafa;
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         font-size: 25pt;
         font-weight: normal;
     }

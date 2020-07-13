@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { KeyboardTab, KeyboardReturn } from "styled-icons/material-outlined";
+import { KeyboardTab, KeyboardReturn } from '../../styles/Icons';
 
 export const Container = styled.div`
     height: 100vh;
@@ -29,7 +29,7 @@ export const RightPainel = styled.div`
     color: #fafafa;
 
     h2 {
-        font-family: "Reem Kufi";
+        font-family: 'Reem Kufi';
         font-size: 24pt;
         font-weight: normal;
         margin-left: auto;
@@ -52,14 +52,14 @@ export const FormDiv = styled.div`
 
     h1 {
         margin-bottom: 25px;
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 50pt;
         font-weight: normal;
     }
 
     h3 {
         margin-top: 25px;
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         font-size: 12pt;
         font-weight: normal;
     }
@@ -82,7 +82,7 @@ export const SignUp = styled.div`
     margin: 5px 230px 0 0;
 
     span {
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         font-size: 12pt;
         font-weight: normal;
         color: #fafafa;
@@ -109,7 +109,7 @@ export const GoBack = styled.div`
     margin: 55px 0 0 73px;
 
     span {
-        font-family: "Reem Kufi";
+        font-family: 'Reem Kufi';
         font-weight: normal;
         font-size: 14pt;
     }
@@ -136,7 +136,7 @@ export const JoinUsButton = styled.div`
     cursor: pointer;
 
     span {
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 15pt;
         color: #fafafa;
     }

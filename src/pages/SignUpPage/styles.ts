@@ -1,9 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {
-    KeyboardReturn,
-    PlayCircleFilled,
-} from "styled-icons/material-outlined";
+import { KeyboardReturn, PlayCircleFilled } from '../../styles/Icons';
 
 export const Container = styled.div`
     height: 100vh;
@@ -20,7 +17,7 @@ export const Container = styled.div`
 
     h3 {
         padding-top: 70px;
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         font-size: 18pt;
         font-weight: normal;
     }
@@ -39,7 +36,7 @@ export const RightPainel = styled.div`
     background-color: #fafafa;
 
     h2 {
-        font-family: "Reem Kufi";
+        font-family: 'Reem Kufi';
         font-size: 24pt;
         font-weight: normal;
         color: #ff2c2c;
@@ -57,7 +54,7 @@ export const GoBack = styled.div`
     margin: 55px 0 0 73px;
 
     span {
-        font-family: "Reem Kufi";
+        font-family: 'Reem Kufi';
         font-weight: normal;
         font-size: 14pt;
     }
@@ -79,7 +76,7 @@ export const More = styled.div`
 
     color: #fafafa;
 
-    font-family: "Rubik";
+    font-family: 'Rubik';
     font-size: 20pt;
 `;
 
@@ -91,7 +88,7 @@ export const WatchVideo = styled.div`
 
     color: #fafafa;
 
-    font-family: "Oxygen";
+    font-family: 'Oxygen';
 
     display: flex;
     align-items: center;

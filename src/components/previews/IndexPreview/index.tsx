@@ -20,16 +20,16 @@ interface ComingSoon {
     image: string;
 }
 
-export const MoviePreview: FunctionComponent = () => {
+export const IndexPreview: FunctionComponent = () => {
     const [comingSoon, setComingSoon] = useState<MostPopular[]>([]);
     const [mostPopular, setMostPopular] = useState<ComingSoon[]>([]);
 
-    useEffect(() => {
-        api.get('/index').then(({ data }) => {
-            setComingSoon(data.comingSoon);
-            setMostPopular(data.mostPopular);
-        });
-    }, []);
+    // useEffect(() => {
+    //     api.get('/index').then(({ data }) => {
+    //         setComingSoon(data.comingSoon);
+    //         setMostPopular(data.mostPopular);
+    //     });
+    // }, []);
 
     new Swiper('.swiper-container', {
         slidesPerView: 2,

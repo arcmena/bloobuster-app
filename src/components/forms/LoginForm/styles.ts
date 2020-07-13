@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { AlternateEmail, Lock } from "styled-icons/material-outlined";
+import styled from 'styled-components';
+
+import { AlternateEmail, Lock } from '../../../styles/Icons';
 
 export const Form = styled.form`
     display: flex;
@@ -62,7 +63,7 @@ export const SignInButton = styled.button`
     border-radius: 0;
 
     span {
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 14pt;
     }
 

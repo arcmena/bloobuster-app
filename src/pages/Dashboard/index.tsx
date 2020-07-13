@@ -8,6 +8,7 @@ export const Dashboard = () => {
 
     return (
         <div>
+            {/* <Header/> */}
             <h1>dashboard</h1>
             <FeedLayout />
         </div>

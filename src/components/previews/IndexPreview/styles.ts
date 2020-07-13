@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    color: #fafafa;
+
+    font-family: 'Rubik';
+    font-size: 20px;
+    h3 {
+        font-weight: normal;
+    }
+
     img {
         height: 200px;
     }

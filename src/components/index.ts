@@ -2,8 +2,9 @@
 import { LoginForm } from './forms/LoginForm';
 import { SignUpForm } from './forms/SignUpForm';
 import { Overlay } from './overlay';
-import { MoviePreview } from './previews/MoviePreview';
+import Post from './post';
+import { IndexPreview } from './previews/IndexPreview';
 
 //Layouts
 
-export { LoginForm, SignUpForm, Overlay, MoviePreview };
+export { LoginForm, SignUpForm, Overlay, IndexPreview, Post };

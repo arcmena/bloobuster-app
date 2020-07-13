@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { UserProvider } from "./config/contexts/UserContext";
-import Routes from "./routes";
-import GlobalStyles from "./GlobalStyles";
+import { UserProvider } from './config/contexts/UserContext';
+import Routes from './routes';
+import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
     return (

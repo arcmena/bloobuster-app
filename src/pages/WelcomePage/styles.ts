@@ -1,9 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {
-    PlayCircleFilled,
-    ArrowRightAlt,
-} from "styled-icons/material-outlined";
+import { PlayCircleFilled, ArrowRightAlt } from '../../styles/Icons';
 
 export const Container = styled.div`
     height: 100vh;
@@ -31,20 +28,20 @@ export const TextDiv = styled.div`
     color: #fafafa;
 
     h2 {
-        font-family: "Reem Kufi";
+        font-family: 'Reem Kufi';
         font-size: 24pt;
         font-weight: normal;
     }
 
     h1 {
         padding-top: 80px;
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 34pt;
         font-weight: normal;
     }
 
     h4 {
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         font-size: 15pt;
         font-weight: normal;
         color: #c0c0c0;
@@ -62,7 +59,7 @@ export const LearnMore = styled.div`
     width: 160px;
 
     span {
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 15pt;
     }
 `;
@@ -88,7 +85,7 @@ export const JoinUsButton = styled.div`
     cursor: pointer;
 
     span {
-        font-family: "Rubik";
+        font-family: 'Rubik';
         font-size: 15pt;
         color: #fafafa;
     }
