@@ -11,13 +11,13 @@ import { Container } from './styles';
 interface MostPopular {
     id: string;
     title: string;
-    image: string;
+    resizedPoster: string;
 }
 
 interface ComingSoon {
     id: string;
     title: string;
-    image: string;
+    resizedPoster: string;
 }
 
 export const IndexPreview: FunctionComponent = () => {
@@ -46,7 +46,10 @@ export const IndexPreview: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {mostPopular.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img src={movie.image} alt="movieImage" />
+                                <img
+                                    src={movie.resizedPoster}
+                                    alt="movieImage"
+                                />
                             </div>
                         ))}
                     </div>
@@ -58,7 +61,10 @@ export const IndexPreview: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {comingSoon.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img src={movie.image} alt="movieImage" />
+                                <img
+                                    src={movie.resizedPoster}
+                                    alt="movieImage"
+                                />
                             </div>
                         ))}
                     </div>

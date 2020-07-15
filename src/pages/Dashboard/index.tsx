@@ -1,16 +1,18 @@
 import React, { useEffect, useContext } from 'react';
 
 import { UserContext } from '../../config/contexts/UserContext';
-import FeedLayout from '../../Layouts/FeedLayout';
+import DashboardLayout from '../../Layouts/FeedLayout';
 
-export const Dashboard = () => {
-    const { logged, setLogged } = useContext(UserContext);
+const Dashboard = () => {
+    // const { logged, setLogged } = useContext(UserContext);
 
     return (
         <div>
             {/* <Header/> */}
             <h1>dashboard</h1>
-            <FeedLayout />
+            <DashboardLayout />
         </div>
     );
 };
+
+export default Dashboard;

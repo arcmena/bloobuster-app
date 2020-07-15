@@ -21,8 +21,30 @@ export const Container = styled.div`
     > div {
         display: flex;
         flex-direction: column;
-        padding: 12.5px;
+        padding: 20px;
+    }
+
+    label {
+        color: #606060;
+        margin-bottom: 5px;
+    }
+
+    span {
+        color: #2b2b2b;
+        font-size: 18px;
+        margin-bottom: 16px;
     }
 `;
 
-export const SeeFullButton = styled.div``;
+export const Bottom = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+`;
+
+export const SeeFullButton = styled(Send)`
+    height: 30px;
+    width: 30px;
+    color: rgba(255, 44, 44, 0.8);
+    margin-left: auto;
+`;

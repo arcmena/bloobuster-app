@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { WelcomePage } from './pages/WelcomePage';
 import { LoginPage } from './pages/LoginPage';
 import { SignUpPage } from './pages/SignUpPage';
-import { Dashboard } from './pages/Dashboard';
+import Dashboard from './pages/Dashboard';
 
 import { UserContext } from './config/contexts/UserContext';
 

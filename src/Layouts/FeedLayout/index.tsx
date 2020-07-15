@@ -1,49 +1,62 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
 
-import { IndexPreview, Post } from '../../components';
+import FeedView from '../../views/FeedView';
+import MovieView from '../../views/MovieView';
 
-import {
-    Container,
-    Content,
-    MenuDiv,
-    Posts,
-    CreateAPost,
-    MovieIcon,
-    PreviewDiv,
-} from './styles';
+import { Container, Content, MenuDiv } from './styles';
 
-const FeedLayout: FunctionComponent = () => {
+const DashboardLayout: FunctionComponent = () => {
+    const [menu, setMenu] = useState('feed');
+
+    const setMenuClass = (e) => {
+        const id = e.target.id;
+        if (menu !== id) setMenu(id);
+    };
+
     return (
         <Container>
             <MenuDiv>
                 <ul>
-                    <li className="active">feed</li>
-                    <li>movies</li>
-                    <li>series</li>
+                    <Link to="/">
+                        <li
+                            className={`${menu === 'feed' ? 'active' : ''}`}
+                            id="feed"
+                            onClick={setMenuClass}
+                        >
+                            feed
+                        </li>
+                    </Link>
+
+                    <Link to="/movies">
+                        <li
+                            className={`${menu === 'movies' ? 'active' : ''}`}
+                            id="movies"
+                            onClick={setMenuClass}
+                        >
+                            movies
+                        </li>
+                    </Link>
+
+                    <Link to="/series">
+                        <li
+                            className={`${menu === 'series' ? 'active' : ''}`}
+                            id="series"
+                            onClick={setMenuClass}
+                        >
+                            series
+                        </li>
+                    </Link>
                 </ul>
             </MenuDiv>
             <Content>
-                <Posts>
-                    <CreateAPost>
-                        {/* <input
-                        type="text"
-                        placeholder="Write a post or a review!"
-                    /> */}
-                        <span>Write a post or a review!</span>
-                        <MovieIcon />
-                    </CreateAPost>
-                    <Post />
-                    <Post />
-                    <Post />
-                    <Post />
-                </Posts>
-
-                <PreviewDiv>
-                    <IndexPreview />
-                </PreviewDiv>
+                <Switch>
+                    <Route exact path="/" component={FeedView} />
+                    <Route exact path="/movies" component={MovieView} />
+                </Switch>
             </Content>
         </Container>
     );
 };
 
-export default FeedLayout;
+export default DashboardLayout;
