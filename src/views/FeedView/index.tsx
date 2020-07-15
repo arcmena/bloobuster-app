@@ -17,6 +17,7 @@ export interface PostsInterface {
     titleId: string;
     title: string;
     titleImg: string;
+    rating: number;
 }
 
 const Feed: FunctionComponent<PostsInterface> = () => {
@@ -43,6 +44,7 @@ const Feed: FunctionComponent<PostsInterface> = () => {
                         titleId={post.titleId}
                         title={post.title}
                         titleImg={post.titleImg}
+                        rating={5}
                     />
                 ))}
             </Posts>

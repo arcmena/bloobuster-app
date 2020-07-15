@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 
 import { UserContext } from '../../config/contexts/UserContext';
-import DashboardLayout from '../../Layouts/FeedLayout';
+import DashboardLayout from '../../Layouts/DashboardLayout';
 
 const Dashboard = () => {
     // const { logged, setLogged } = useContext(UserContext);

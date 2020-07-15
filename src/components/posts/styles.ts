@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Send } from '../../styles/Icons';
+import { Send, StarRate } from '../../styles/Icons';
 
 export const Container = styled.div`
     display: flex;
@@ -40,6 +40,13 @@ export const Bottom = styled.div`
     display: flex;
     align-items: center;
     margin-top: auto;
+
+    label {
+        font-family: 'Oxygen';
+        font-size: 17px;
+        margin: auto 0 auto;
+        color: black;
+    }
 `;
 
 export const SeeFullButton = styled(Send)`
@@ -47,4 +54,10 @@ export const SeeFullButton = styled(Send)`
     width: 30px;
     color: rgba(255, 44, 44, 0.8);
     margin-left: auto;
+`;
+
+export const StarRatings = styled(StarRate)`
+    height: 40px;
+    width: 40px;
+    color: gold;
 `;
