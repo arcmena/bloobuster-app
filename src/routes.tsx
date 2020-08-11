@@ -26,10 +26,10 @@ const Routes = () => {
                     <Route path="/signup" component={SignUpPage} />
                 </Switch>
             ) : (
-                <Switch>
-                    <Route path="/" component={Dashboard} />
-                </Switch>
-            )}
+                    <Switch>
+                        <Route path="/" component={Dashboard} />
+                    </Switch>
+                )}
         </BrowserRouter>
     );
 };

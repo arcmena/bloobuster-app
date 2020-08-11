@@ -20,7 +20,7 @@ export const Review: FunctionComponent<ReviewInterface> = ({ authorName, content
 
     return (
         <Container>
-            <img src={titleImg} alt="movieposter.jpg" />
+            <img src={titleImg} alt="Movie Poster" />
             <div>
                 <label>{authorName}</label>
                 <span>talks about: {title}</span>

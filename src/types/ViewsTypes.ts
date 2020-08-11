@@ -1,11 +1,15 @@
-export interface MostPopular {
-    id: string;
-    resizedPoster: string;
-}
-
-export interface ComingSoon {
-    id: string;
-    resizedPoster: string;
+export interface PostsInterface {
+    id: number;
+    authorId: number;
+    authorInfo: {
+        name: string;
+        email: string;
+    };
+    content: string;
+    titleId: string;
+    title: string;
+    titleImg: string;
+    rating: number;
 }
 
 export interface Action {

@@ -4,7 +4,8 @@ import { SignUpForm } from './forms/SignUpForm';
 import { Overlay } from './overlay';
 import { Review } from './posts';
 import { IndexPreview } from './previews/IndexPreview';
+import MediaCarousel from './elements/MovieCarousel';
 
 //Layouts
 
-export { LoginForm, SignUpForm, Overlay, IndexPreview, Review };
+export { LoginForm, SignUpForm, Overlay, IndexPreview, Review, MediaCarousel };

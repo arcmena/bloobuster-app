@@ -6,19 +6,7 @@ import api from '../../services/api';
 
 import { Content, Posts, CreateAPost, MovieIcon, PreviewDiv } from './styles';
 
-export interface PostsInterface {
-    id: number;
-    authorId: number;
-    authorInfo: {
-        name: string;
-        email: string;
-    };
-    content: string;
-    titleId: string;
-    title: string;
-    titleImg: string;
-    rating: number;
-}
+import { PostsInterface } from '../../types/ViewsTypes';
 
 const Feed: FunctionComponent<PostsInterface> = () => {
     const [posts, setPosts] = useState<PostsInterface[]>([]);
@@ -44,7 +32,7 @@ const Feed: FunctionComponent<PostsInterface> = () => {
                         titleId={post.titleId}
                         title={post.title}
                         titleImg={post.titleImg}
-                        rating={5}
+                        rating={post.rating}
                     />
                 ))}
             </Posts>
