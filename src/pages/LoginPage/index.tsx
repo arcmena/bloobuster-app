@@ -1,25 +1,10 @@
-import React, {
-    useState,
-    FormEvent,
-    useContext,
-    ChangeEvent,
-    useEffect,
-} from 'react';
+import React, { useState, FormEvent, useContext, ChangeEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SyncLoader from 'react-spinners/SyncLoader';
 
 import { LoginForm } from '../../components';
 
-import {
-    Container,
-    RightPainel,
-    FormWhrapper,
-    FormDiv,
-    SignUp,
-    RightArrow,
-    GoBack,
-    LeftArrow,
-} from './styles';
+import { Container, RightPainel, FormWhrapper, FormDiv, SignUp, RightArrow, GoBack, LeftArrow } from './styles';
 
 import Boy from '../../assets/boy-wider.png';
 
@@ -57,18 +42,11 @@ export const LoginPage = () => {
                         {!loading ? (
                             <div>
                                 <h1>Login</h1>
-                                <LoginForm
-                                    onChange={handleChange}
-                                    onSubmit={handleSubmit}
-                                />
+                                <LoginForm onChange={handleChange} onSubmit={handleSubmit} />
                                 <h3>Forgot Password?</h3>
                             </div>
                         ) : (
-                            <SyncLoader
-                                loading={loading}
-                                color={'#fafafa'}
-                                size={20}
-                            />
+                            <SyncLoader loading={loading} color={'#fafafa'} size={20} />
                         )}
                     </FormDiv>
                     <Link to="/signup">

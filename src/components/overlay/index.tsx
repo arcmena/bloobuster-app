@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 
-import { Container, MessageDiv, SuccessIcon } from "./styles";
+import { Container, MessageDiv, SuccessIcon } from './styles';
 
 interface OverlayInterface {
     text: string;

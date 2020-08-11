@@ -28,6 +28,42 @@ Bloobuster is an APP made to share tv shows and movies experiences. Here you can
   <img src="https://user-images.githubusercontent.com/57734796/86968508-acd71300-c142-11ea-83b6-9d2ef1ea2d1c.png" width="400" /> 
 </p>
 
+## Getting started
+
+Clone this repo:
+
+```bash
+git clone https://github.com/arcmena/bloobuster-app.git
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+or simply:
+
+```bash
+yarn
+```
+
+## Configuration
+
+Create a .env.development.local based on the .env.example with your configuration to connect to the [bloobuster-api](https://github.com/arcmena/bloobuster-app).
+
+```json
+REACT_APP_API=    # The base URL to the api (e.g. http://localhost:3500)
+```
+
+Then you can run to start: 
+
+```bash
+yarn start
+```
+
+> **Note:** The server will start at http://localhost:3000 by default.
+
 <div align="center">
 🛠 IN PROGRESS
 </div>

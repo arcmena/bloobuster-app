@@ -1,38 +1,19 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 
-import {
-    Form,
-    Input,
-    FName,
-    Lname,
-    Username,
-    Email,
-    Pass,
-    ConfPass,
-    DivButton,
-    FinishButton,
-} from "./styles";
+import { Form, Input, FName, Lname, Username, Email, Pass, ConfPass, DivButton, FinishButton } from './styles';
 
 interface FormInterface {
     onChange: any;
     onSubmit: any;
 }
 
-export const SignUpForm: FunctionComponent<FormInterface> = ({
-    onChange,
-    onSubmit,
-}) => {
+export const SignUpForm: FunctionComponent<FormInterface> = ({ onChange, onSubmit }) => {
     return (
         <Form onChange={onChange} onSubmit={onSubmit}>
             <div>
                 <FName>
                     <label htmlFor="firstname">First name</label>
-                    <Input
-                        type="text"
-                        name="firstname"
-                        id="firstname"
-                        required
-                    />
+                    <Input type="text" name="firstname" id="firstname" required />
                 </FName>
 
                 <Lname>
@@ -56,22 +37,12 @@ export const SignUpForm: FunctionComponent<FormInterface> = ({
             <div>
                 <Pass>
                     <label htmlFor="password">Password</label>
-                    <Input
-                        type="password"
-                        name="password"
-                        id="password"
-                        required
-                    />
+                    <Input type="password" name="password" id="password" required />
                 </Pass>
 
                 <ConfPass>
                     <label htmlFor="confPassword">Confirm password</label>
-                    <Input
-                        type="password"
-                        name="confPassword"
-                        id="confPassword"
-                        required
-                    />
+                    <Input type="password" name="confPassword" id="confPassword" required />
                 </ConfPass>
             </div>
 

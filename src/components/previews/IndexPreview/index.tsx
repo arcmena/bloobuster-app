@@ -46,10 +46,7 @@ export const IndexPreview: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {mostPopular.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -61,10 +58,7 @@ export const IndexPreview: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {comingSoon.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>

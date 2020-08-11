@@ -11,13 +11,7 @@ interface ReviewInterface {
     rating: number;
 }
 
-export const Review: FunctionComponent<ReviewInterface> = ({
-    authorName,
-    content,
-    title,
-    titleImg,
-    rating,
-}) => {
+export const Review: FunctionComponent<ReviewInterface> = ({ authorName, content, title, titleImg, rating }) => {
     const ratingStars = [];
 
     for (let i = 1; i <= rating; i++) {

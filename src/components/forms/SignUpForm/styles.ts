@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Form = styled.form`
     width: 540px;
@@ -15,7 +15,7 @@ export const Form = styled.form`
     }
 
     label {
-        font-family: "Oxygen";
+        font-family: 'Oxygen';
         margin-bottom: 5px;
     }
 
@@ -74,7 +74,7 @@ export const FinishButton = styled.button`
     height: 40px;
     color: #fafafa;
     font-size: 13pt;
-    font-family: "Rubik";
+    font-family: 'Rubik';
 
     cursor: pointer;
 

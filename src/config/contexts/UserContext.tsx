@@ -20,9 +20,7 @@ interface InitContextProps {
 
 export const UserContext = createContext({} as InitContextProps);
 
-export const UserProvider: FunctionComponent<ContextInterface> = ({
-    children,
-}) => {
+export const UserProvider: FunctionComponent<ContextInterface> = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [logged, setLogged] = useState(false);
 
@@ -57,9 +55,5 @@ export const UserProvider: FunctionComponent<ContextInterface> = ({
         refreshToken,
     };
 
-    return (
-        <UserContext.Provider value={providerValue}>
-            {children}
-        </UserContext.Provider>
-    );
+    return <UserContext.Provider value={providerValue}>{children}</UserContext.Provider>;
 };

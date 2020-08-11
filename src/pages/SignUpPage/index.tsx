@@ -1,31 +1,22 @@
-import React, { useState, useEffect, FormEvent, ChangeEvent } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
-import { SignUpForm, Overlay } from "../../components";
+import { SignUpForm, Overlay } from '../../components';
 
-import {
-    Container,
-    RightPainel,
-    FormDiv,
-    GoBack,
-    LeftArrow,
-    More,
-    WatchVideo,
-    PlayIcon,
-} from "./styles";
+import { Container, RightPainel, FormDiv, GoBack, LeftArrow, More, WatchVideo, PlayIcon } from './styles';
 
-import api from "../../services/api";
+import api from '../../services/api';
 
-import Boidog from "../../assets/boidog.png";
+import Boidog from '../../assets/boidog.png';
 
 export const SignUpPage = () => {
     const [inputValues, setInputValues] = useState({
-        username: "",
-        firstname: "",
-        lastname: "",
-        email: "",
-        password: "",
-        confPassword: "",
+        username: '',
+        firstname: '',
+        lastname: '',
+        email: '',
+        password: '',
+        confPassword: '',
     });
 
     const [success, setSucess] = useState(false);
@@ -45,11 +36,11 @@ export const SignUpPage = () => {
             name: `${inputValues.firstname} ${inputValues.lastname}`,
         };
 
-        await api.post("/createUser", userData);
+        await api.post('/createUser', userData);
 
         setSucess(true);
         setTimeout(() => {
-            history.push("/login");
+            history.push('/login');
         }, 5000);
     }
 
@@ -60,19 +51,12 @@ export const SignUpPage = () => {
 
     return (
         <Container>
-            {success ? (
-                <Overlay text={`Nice to meet you ${inputValues.firstname}!`} />
-            ) : (
-                <div></div>
-            )}
+            {success ? <Overlay text={`Nice to meet you ${inputValues.firstname}!`} /> : <div></div>}
             <RightPainel>
                 <h2>Bloobuster</h2>
                 <h3>Sign Up</h3>
                 <FormDiv>
-                    <SignUpForm
-                        onChange={handleChange}
-                        onSubmit={handleSubmit}
-                    />
+                    <SignUpForm onChange={handleChange} onSubmit={handleSubmit} />
                 </FormDiv>
             </RightPainel>
             <Link to="/">

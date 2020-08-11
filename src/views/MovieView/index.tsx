@@ -7,14 +7,7 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 //Interfaces
-import {
-    Action,
-    Adventure,
-    Animation,
-    ComingSoon,
-    MostPopular,
-    Scifi,
-} from '../../types/types';
+import { Action, Adventure, Animation, ComingSoon, MostPopular, Scifi } from '../../types/types';
 
 import { Content } from './styles';
 
@@ -51,10 +44,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {mostPopular.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -66,10 +56,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {comingSoon.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -81,10 +68,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {action.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -96,10 +80,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {adventure.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -111,10 +92,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {scifi.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>
@@ -126,10 +104,7 @@ const MovieView: FunctionComponent = () => {
                     <div className="swiper-wrapper">
                         {animation.map((movie) => (
                             <div className="swiper-slide" key={movie.id}>
-                                <img
-                                    src={movie.resizedPoster}
-                                    alt="movieImage"
-                                />
+                                <img src={movie.resizedPoster} alt="movieImage" />
                             </div>
                         ))}
                     </div>

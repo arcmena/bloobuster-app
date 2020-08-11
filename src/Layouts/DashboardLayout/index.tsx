@@ -19,31 +19,19 @@ const DashboardLayout: FunctionComponent = () => {
             <MenuDiv>
                 <ul>
                     <Link to="/">
-                        <li
-                            className={`${menu === 'feed' ? 'active' : ''}`}
-                            id="feed"
-                            onClick={setMenuClass}
-                        >
+                        <li className={`${menu === 'feed' ? 'active' : ''}`} id="feed" onClick={setMenuClass}>
                             feed
                         </li>
                     </Link>
 
                     <Link to="/movies">
-                        <li
-                            className={`${menu === 'movies' ? 'active' : ''}`}
-                            id="movies"
-                            onClick={setMenuClass}
-                        >
+                        <li className={`${menu === 'movies' ? 'active' : ''}`} id="movies" onClick={setMenuClass}>
                             movies
                         </li>
                     </Link>
 
                     <Link to="/series">
-                        <li
-                            className={`${menu === 'series' ? 'active' : ''}`}
-                            id="series"
-                            onClick={setMenuClass}
-                        >
+                        <li className={`${menu === 'series' ? 'active' : ''}`} id="series" onClick={setMenuClass}>
                             series
                         </li>
                     </Link>
