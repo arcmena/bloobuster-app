@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 //Pages
 import { WelcomePage } from './pages/WelcomePage';
@@ -18,7 +18,7 @@ const Routes = () => {
     }, []);
 
     return (
-        <BrowserRouter>
+        <>
             {!logged ? (
                 <Switch>
                     <Route exact path="/" component={LoginPage} />
@@ -30,7 +30,7 @@ const Routes = () => {
                         <Route path="/" component={Dashboard} />
                     </Switch>
                 )}
-        </BrowserRouter>
+        </>
     );
 };
 

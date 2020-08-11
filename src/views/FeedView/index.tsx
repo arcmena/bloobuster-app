@@ -12,8 +12,8 @@ const Feed: FunctionComponent<PostsInterface> = () => {
     const [posts, setPosts] = useState<PostsInterface[]>([]);
 
     useEffect(() => {
-        api.get('/reviews')
-            .then(({ data }) => setPosts(data.reviews))
+        api.get('/posts')
+            .then(({ data }) => setPosts(data))
             .catch((error) => console.error(error));
     }, []);
 

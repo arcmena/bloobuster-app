@@ -5,5 +5,5 @@ export interface Media {
 
 export interface MediaCarouselInterf {
     title: string;
-    movies: Media[];
+    media: Media[];
 }

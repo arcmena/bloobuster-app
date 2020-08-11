@@ -27,16 +27,16 @@ const MovieView: FunctionComponent = () => {
     return (
         <Content>
             <div>
-                <MediaCarousel title="Action" movies={action} />
+                <MediaCarousel title="Action" media={action} />
             </div>
             <div>
-                <MediaCarousel title="Adventure" movies={adventure} />
+                <MediaCarousel title="Adventure" media={adventure} />
             </div>
             <div>
-                <MediaCarousel title="Animation" movies={animation} />
+                <MediaCarousel title="Animation" media={animation} />
             </div>
             <div>
-                <MediaCarousel title="Sci-Fi" movies={scifi} />
+                <MediaCarousel title="Sci-Fi" media={scifi} />
             </div>
         </Content>
     );
