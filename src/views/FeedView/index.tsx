@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 
-import { IndexPreview, Review } from '../../components';
+import { IndexPreview, Post } from '../../components';
 
 import api from '../../services/api';
 
@@ -25,7 +25,7 @@ const Feed: FunctionComponent<PostsInterface> = () => {
                     <MovieIcon />
                 </CreateAPost>
                 {posts.map((post) => (
-                    <Review
+                    <Post
                         key={post.id}
                         authorName={post.authorInfo.name}
                         content={post.content.substr(0, 200).concat('...')}

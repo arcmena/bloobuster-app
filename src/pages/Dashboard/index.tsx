@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     return (
         <Container>
-            <Header /
+            <Header />
             <DashboardLayout />
         </Container>
     );

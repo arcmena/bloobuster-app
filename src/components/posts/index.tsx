@@ -2,20 +2,13 @@ import React, { FunctionComponent } from 'react';
 
 import { Container, SeeFullButton, Bottom, StarRatings } from './styles';
 
-interface ReviewInterface {
-    authorName: string;
-    content: string;
-    titleId: string;
-    title: string;
-    titleImg: string;
-    rating: number;
-}
+import { PostInterface } from '../../types/ComponentTypes';
 
-export const Review: FunctionComponent<ReviewInterface> = ({ authorName, content, title, titleImg, rating }) => {
+const Post: FunctionComponent<PostInterface> = ({ authorName, content, title, titleImg, rating }) => {
     const ratingStars = [];
 
     for (let i = 1; i <= rating; i++) {
-        ratingStars.push(<StarRatings />);
+        ratingStars.push(<StarRatings key={i} />);
     }
 
     return (
@@ -34,3 +27,5 @@ export const Review: FunctionComponent<ReviewInterface> = ({ authorName, content
         </Container>
     );
 };
+
+export default Post;
