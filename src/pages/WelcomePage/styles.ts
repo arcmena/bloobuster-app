@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { PlayCircleFilled, ArrowRightAlt } from '../../styles/Icons';
+import { PlayCircleFilled, ArrowRightAlt } from '../../assets/styles/Icons';
 
 export const Container = styled.div`
     height: 100vh;

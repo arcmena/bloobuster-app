@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Send, StarRate } from '../../styles/Icons';
+import { Send, StarRate } from '../../../assets/styles/Icons';
 
 export const Container = styled.div`
     display: flex;

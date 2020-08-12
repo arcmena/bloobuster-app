@@ -2,7 +2,7 @@ export interface PostsInterface {
     id: number;
     authorId: number;
     authorInfo: {
-        name: string;
+        username: string;
         email: string;
     };
     content: string;
@@ -30,4 +30,10 @@ export interface Scifi {
 export interface Animation {
     id: string;
     resizedPoster: string;
+}
+
+export interface SearchResultInterface {
+    id: string;
+    title: string;
+    resizedImage: string;
 }

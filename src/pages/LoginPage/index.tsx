@@ -6,7 +6,7 @@ import { LoginForm } from '../../components';
 
 import { Container, RightPainel, FormWhrapper, FormDiv, SignUp, RightArrow, GoBack, LeftArrow } from './styles';
 
-import Boy from '../../assets/boy-wider.png';
+import Boy from '../../assets/images/boy-wider.png';
 
 import { UserContext } from '../../config/contexts/UserContext';
 
@@ -46,8 +46,8 @@ export const LoginPage = () => {
                                 <h3>Forgot Password?</h3>
                             </div>
                         ) : (
-                            <SyncLoader loading={loading} color={'#fafafa'} size={20} />
-                        )}
+                                <SyncLoader loading={loading} color={'#fafafa'} size={20} />
+                            )}
                     </FormDiv>
                     <Link to="/signup">
                         <SignUp>

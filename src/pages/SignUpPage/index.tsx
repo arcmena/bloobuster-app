@@ -7,7 +7,7 @@ import { Container, RightPainel, FormDiv, GoBack, LeftArrow, More, WatchVideo, P
 
 import api from '../../services/api';
 
-import Boidog from '../../assets/boidog.png';
+import Boidog from '../../assets/images/boidog.png';
 
 export const SignUpPage = () => {
     const [inputValues, setInputValues] = useState({

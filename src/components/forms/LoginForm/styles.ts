@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { AlternateEmail, Lock } from '../../../styles/Icons';
+import { AlternateEmail, Lock } from '../../../assets/styles/Icons';
 
 export const Form = styled.form`
     display: flex;

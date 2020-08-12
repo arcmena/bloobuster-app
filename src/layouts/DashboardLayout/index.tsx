@@ -1,13 +1,15 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import React, { FunctionComponent, useState, useEffect } from 'react';
+import { Switch, Route, Link, useLocation } from 'react-router-dom';
 
 import FeedView from '../../views/FeedView';
-import MovieView from '../../views/MovieView';
+import DiscoverView from '../../views/DiscoverView';
 
 import { Container, Content, MenuDiv } from './styles';
 
 const DashboardLayout: FunctionComponent = () => {
-    const [menu, setMenu] = useState('feed');
+    const location = useLocation();
+
+    const [menu, setMenu] = useState(location.pathname);
 
     const setMenuClass = (e) => {
         const id = e.target.id;
@@ -19,20 +21,14 @@ const DashboardLayout: FunctionComponent = () => {
             <MenuDiv>
                 <ul>
                     <Link to="/">
-                        <li className={`${menu === 'feed' ? 'active' : ''}`} id="feed" onClick={setMenuClass}>
+                        <li className={`${menu === '/' ? 'active' : ''}`} id="/" onClick={setMenuClass}>
                             feed
                         </li>
                     </Link>
 
-                    <Link to="/movies">
-                        <li className={`${menu === 'movies' ? 'active' : ''}`} id="movies" onClick={setMenuClass}>
-                            movies
-                        </li>
-                    </Link>
-
-                    <Link to="/series">
-                        <li className={`${menu === 'series' ? 'active' : ''}`} id="series" onClick={setMenuClass}>
-                            series
+                    <Link to="/discover">
+                        <li className={`${menu === '/discover' ? 'active' : ''}`} id="/discover" onClick={setMenuClass}>
+                            discover
                         </li>
                     </Link>
                 </ul>
@@ -40,7 +36,7 @@ const DashboardLayout: FunctionComponent = () => {
             <Content>
                 <Switch>
                     <Route exact path="/" component={FeedView} />
-                    <Route exact path="/movies" component={MovieView} />
+                    <Route exact path="/discover" component={DiscoverView} />
                 </Switch>
             </Content>
         </Container>

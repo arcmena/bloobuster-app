@@ -11,6 +11,12 @@ export default createGlobalStyle`
         height: 100%;
     }
 
+    textarea:focus,
+    input:focus,
+    button:focus {
+        outline: none;
+    }
+
     @keyframes fadein {
         from {
             opacity: 0;

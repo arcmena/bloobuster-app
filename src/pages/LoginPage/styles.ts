@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { KeyboardTab, KeyboardReturn } from '../../styles/Icons';
+import { KeyboardTab, KeyboardReturn } from '../../assets/styles/Icons';
 
 export const Container = styled.div`
     height: 100vh;

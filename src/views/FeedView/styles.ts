@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Movie } from '../../styles/Icons';
+import { Movie } from '../../assets/styles/Icons';
 
 export const Content = styled.div`
     display: flex;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Container, TextDiv, LearnMore, PlayIcon, JoinUsButton, LeftArrow } from './styles';
 
-import Girl from '../../assets/girl-wider.png';
+import Girl from '../../assets/images/girl-wider.png';
 
 export const WelcomePage = () => {
     return (

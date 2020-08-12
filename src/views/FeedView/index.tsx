@@ -27,8 +27,8 @@ const Feed: FunctionComponent<PostsInterface> = () => {
                 {posts.map((post) => (
                     <Post
                         key={post.id}
-                        authorName={post.authorInfo.name}
-                        content={post.content.substr(0, 200).concat('...')}
+                        authorName={post.authorInfo.username}
+                        content={post.content}
                         titleId={post.titleId}
                         title={post.title}
                         titleImg={post.titleImg}

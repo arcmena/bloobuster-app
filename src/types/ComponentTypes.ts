@@ -16,3 +16,14 @@ export interface PostInterface {
     titleImg: string;
     rating: number;
 }
+
+export interface SearchBarInterface {
+    onChange: (event: React.FormEvent<HTMLFormElement>) => void;
+    onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+}
+
+export interface SearchResultInterface {
+    id: string;
+    title: string;
+    image: string;
+}

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Done } from '../../styles/Icons';
+import { Done } from '../../assets/styles/Icons';
 
 export const Container = styled.div`
     position: fixed;
