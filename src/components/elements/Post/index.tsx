@@ -19,7 +19,7 @@ const Post: FunctionComponent<PostInterface> = ({ authorName, content, title, ti
                     <div>
                         <label>{authorName}</label>
                         <span>talks about: {title}</span>
-                        <p>{content.substr(0, 200).concat('...')}</p>
+                        <p>{content.substr(0, 150).concat('...')}</p>
                         <Bottom>
                             <label>User Rating: </label>
                             {ratingStars}

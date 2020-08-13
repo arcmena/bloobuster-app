@@ -18,8 +18,8 @@ export interface PostInterface {
 }
 
 export interface SearchBarInterface {
-    onChange: (event: React.FormEvent<HTMLFormElement>) => void;
-    onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+    onChange: any;
+    onSubmit: any;
 }
 
 export interface SearchResultInterface {

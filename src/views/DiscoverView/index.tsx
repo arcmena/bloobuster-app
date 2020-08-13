@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState, useEffect, FormEvent, ChangeEvent } from 'react';
 
 //Interfaces
 import { Action, Adventure, Animation, Scifi, SearchResultInterface } from '../../types/ViewsTypes';
@@ -25,24 +25,26 @@ const DiscoverView: FunctionComponent = () => {
     const [searchData, setSearchData] = useState<SearchResultInterface[]>([]);
     const [activeSearch, setActiveSearch] = useState(false);
 
-    useEffect(() => {
-        api.get('/movieIndex').then(({ data }) => {
-            setActionM(data.action);
-            setAdventureM(data.adventure);
-            setAnimationM(data.animation);
-            setScifiM(data.scifi);
-        });
-    }, []);
+    // useEffect(() => {
+    //     api.get('/movieIndex').then(({ data }) => {
+    //         setActionM(data.action);
+    //         setAdventureM(data.adventure);
+    //         setAnimationM(data.animation);
+    //         setScifiM(data.scifi);
+    //     });
+    // }, []);
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSeachValue(e.target.value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         console.log(searchValue);
         setActiveSearch(true);
-        api.get(`/search/${searchValue}`).then(({ data }) => setSearchData(data.result)).catch((error) => console.error(error));
+        api.get(`/search/${searchValue}`)
+            .then(({ data }) => setSearchData(data.result))
+            .catch((error) => console.error(error));
     }
 
     return (
