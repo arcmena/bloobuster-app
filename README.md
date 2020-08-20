@@ -50,7 +50,7 @@ yarn
 
 ## Configuration
 
-Create a .env.development.local based on the .env.example with your configuration to connect to the [bloobuster-api](https://github.com/arcmena/bloobuster-app).
+Create a .env.development.local based on the .env.example with your configuration to connect to the [bloobuster-api](https://github.com/arcmena/bloobuster-api).
 
 ```json
 REACT_APP_API=    # The base URL to the api (e.g. http://localhost:3500)
