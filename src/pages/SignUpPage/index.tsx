@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent, ChangeEvent } from 'react';
+import React, { FunctionComponent, useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import { SignUpForm, Overlay } from '../../components';
@@ -9,7 +9,7 @@ import api from '../../services/api';
 
 import Boidog from '../../assets/images/boidog.png';
 
-export const SignUpPage = () => {
+const SignUpPage: FunctionComponent = () => {
     const [inputValues, setInputValues] = useState({
         username: '',
         firstname: '',
@@ -51,7 +51,7 @@ export const SignUpPage = () => {
 
     return (
         <Container>
-            {success ? <Overlay text={`Nice to meet you ${inputValues.firstname}!`} /> : <div></div>}
+            {success ? <Overlay text={`Nice to meet you ${inputValues.firstname}!`} /> : null}
             <RightPainel>
                 <h2>Bloobuster</h2>
                 <h3>Sign Up</h3>
@@ -77,3 +77,5 @@ export const SignUpPage = () => {
         </Container>
     );
 };
+
+export default SignUpPage;

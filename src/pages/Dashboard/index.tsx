@@ -1,19 +1,20 @@
-import React, { useEffect, useContext } from 'react';
+import React, { FunctionComponent, useContext } from 'react';
 
-import { UserContext } from '../../config/contexts/UserContext';
+import { ProfileContext } from '../../config/contexts/ProfileContext';
 
 import DashboardLayout from '../../layouts/DashboardLayout';
 
-import { Header } from '../../components';
+import { Header, Profile } from '../../components';
 
 import { Container } from './styles';
 
-const Dashboard = () => {
-    // const { logged, setLogged } = useContext(UserContext);
+const Dashboard: FunctionComponent = () => {
+    const { isOpen } = useContext(ProfileContext);
 
     return (
         <Container>
             <Header />
+            {isOpen ? <Profile /> : null}
             <DashboardLayout />
         </Container>
     );

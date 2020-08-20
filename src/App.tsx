@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 
 import { UserProvider } from './config/contexts/UserContext';
 import Routes from './routes';
 import GlobalStyles from './assets/styles/GlobalStyles';
 
-function App() {
+const App: FunctionComponent = () => {
     return (
         <UserProvider>
             <Router>
@@ -15,6 +14,6 @@ function App() {
             <GlobalStyles />
         </UserProvider>
     );
-}
+};
 
 export default App;

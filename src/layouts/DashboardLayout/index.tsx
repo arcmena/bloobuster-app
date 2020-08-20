@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState, useEffect, useContext } from 'react';
 import { Switch, Route, Link, useLocation } from 'react-router-dom';
 
 import FeedView from '../../views/FeedView';
@@ -12,7 +12,7 @@ const DashboardLayout: FunctionComponent = () => {
     const [menu, setMenu] = useState(location.pathname);
 
     const setMenuClass = (e) => {
-        const id = e.target.id;
+        const { id } = e.target;
         if (menu !== id) setMenu(id);
     };
 

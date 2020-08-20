@@ -1,4 +1,4 @@
-//Components
+// Components
 import { LoginForm } from './forms/LoginForm';
 import { SignUpForm } from './forms/SignUpForm';
 import { Overlay } from './overlay';
@@ -9,6 +9,8 @@ import Header from './elements/Header';
 import SearchBar from './elements/SearchBar';
 import SearchResult from './elements/SearchResult';
 
-//Layouts
+import Profile from './profile';
 
-export { LoginForm, SignUpForm, Overlay, IndexPreview, Post, MediaCarousel, Header, SearchBar, SearchResult };
+// Layouts
+
+export { LoginForm, SignUpForm, Overlay, IndexPreview, Post, MediaCarousel, Header, SearchBar, SearchResult, Profile };

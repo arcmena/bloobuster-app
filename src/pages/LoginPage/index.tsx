@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, useContext, ChangeEvent, useEffect } from 'react';
+import React, { FunctionComponent, useState, FormEvent, useContext, ChangeEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SyncLoader from 'react-spinners/SyncLoader';
 
@@ -10,7 +10,7 @@ import Boy from '../../assets/images/boy-wider.png';
 
 import { UserContext } from '../../config/contexts/UserContext';
 
-export const LoginPage = () => {
+const LoginPage: FunctionComponent = () => {
     const [values, setValues] = useState({});
     const [loading, setLoading] = useState(false);
 
@@ -18,7 +18,7 @@ export const LoginPage = () => {
 
     useEffect(() => {
         logout();
-        //eslint-disable-next-line
+        // eslint-disable-next-line
     }, []);
 
     const handleSubmit = async (e: FormEvent) => {
@@ -46,8 +46,8 @@ export const LoginPage = () => {
                                 <h3>Forgot Password?</h3>
                             </div>
                         ) : (
-                                <SyncLoader loading={loading} color={'#fafafa'} size={20} />
-                            )}
+                            <SyncLoader loading={loading} color="#fafafa" size={20} />
+                        )}
                     </FormDiv>
                     <Link to="/signup">
                         <SignUp>
@@ -69,3 +69,5 @@ export const LoginPage = () => {
         </Container>
     );
 };
+
+export default LoginPage;
