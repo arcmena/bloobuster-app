@@ -19,7 +19,7 @@
         "react-spinners": "^0.9.0",
         "styled-components": "^5.1.1",
         "styled-icons": "^10.5.0",
-        "swiper": "^6.0.1",
+        "swiper": "^6.5.1",
         "typescript": "~3.7.2"
     },
     "scripts": {
